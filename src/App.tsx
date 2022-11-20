@@ -5,6 +5,7 @@ import { Canvas } from "@react-three/fiber"
 import { Ground } from "./components/Ground"
 import { Player } from "./components/Player"
 import { FPV } from "./components/FPV"
+import { Cubes } from "./components/Cubes"
 
 export default function App (): JSX.Element {
   return (
@@ -16,6 +17,7 @@ export default function App (): JSX.Element {
         <FPV />
         <Physics>
           <Player />
+          <Cubes />
           <Ground />
         </Physics>
       </Canvas>

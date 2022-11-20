@@ -76,7 +76,7 @@ export const Player = (): JSX.Element => {
 
       api.velocity.set(direction.x, vel.current[1], direction.z)
 
-    if (jump && Math.abs(vel.current[1] < .05)) {
+    if (jump && Math.abs(Number(vel.current[1] < .05))) {
       api.velocity.set(vel.current[0] , JUMP_FORCE ,vel.current[2])
     }
   })
