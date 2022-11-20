@@ -8,7 +8,7 @@ import {
 import { useSphere } from '@react-three/cannon'
 import { type Object3D, Vector3 } from 'three'
 import { useEffect, useRef } from 'react'
-
+import { useKeyboard } from '../hooks/useKeyboard'
 export const Player = (): JSX.Element => {
   const {camera} = useThree<RootState>() 
   const [ref, api] = useSphere<Object3D<Event>>(() => ({
@@ -16,6 +16,9 @@ export const Player = (): JSX.Element => {
     type: "Dynamic",
     position: [0, 3, 0]
   }))
+
+  const actions = useKeyboard()
+  console.log('action', Object.entries(actions).filter(([e,v]) => v))
 
 
   const vel: React.MutableRefObject<number[]> = useRef<number[]>([0,0,0])
