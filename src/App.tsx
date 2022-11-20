@@ -4,6 +4,8 @@ import { Canvas } from "@react-three/fiber"
 
 import { Ground } from "./components/Ground"
 import { Player } from "./components/Player"
+import { FPV } from "./components/FPV"
+
 export default function App (): JSX.Element {
   return (
     <>
@@ -11,6 +13,7 @@ export default function App (): JSX.Element {
       <Canvas>
         <Sky sunPosition={[100, 100, 20]}></Sky>
         <ambientLight intensity={.5} />
+        <FPV />
         <Physics>
           <Player />
           <Ground />
