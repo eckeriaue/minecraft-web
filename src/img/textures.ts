@@ -1,4 +1,8 @@
-import { NearestFilter, TextureLoader, RepeatWrapping } from 'three'
+import {
+	NearestFilter,
+	TextureLoader,
+	RepeatWrapping
+} from 'three'
 
 import {
 	dirtImg,
