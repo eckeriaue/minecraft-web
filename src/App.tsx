@@ -19,6 +19,7 @@ export default function App (): JSX.Element {
           <Ground />
         </Physics>
       </Canvas>
+      <span className="absolute centered cursor">+</span>
     </>
   )
 }
